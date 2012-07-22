@@ -68,6 +68,7 @@
 	for more details -jm */
 	function onDeviceReady()
 	{
+		cordova.exec(null, null, "SplashScreen", "hide", []);
 		startWatch();
 		
 	}

@@ -11,8 +11,8 @@
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		margin-top: -90px;
-		margin-left: -140px;
+		margin-top: -86px;
+		margin-left: -136px;
 		height:250px;
 		width:280px;
 		background-repeat: no-repeat;	
@@ -29,7 +29,6 @@
 	}
 
 	.msgBlank{
-		margin-top: -120px;
 		-webkit-animation-duration:.3s;
 		-webkit-animation-iteration-count:infinite;
 		-webkit-animation-timing-function:linear;
@@ -38,15 +37,36 @@
 	}
 
 	.msg1y{
-		-webkit-transition: opacity 1s ease-in-out;
 		background-image: url('img/iPadMessage1y.png');
 	}	
 
+	.msg2y{
+		background-image: url('img/iPadMessage2y.png');
+	}	
+	
+	.msg3y{
+		background-image: url('img/iPadMessage3y.png');
+	}	
 
 	.msg1n{
-		-webkit-transition: opacity 1s ease-in-out;
 		background-image: url('img/iPadMessage1n.png');
 	}	
+	
+	.msg2n{
+		background-image: url('img/iPadMessage2n.png');
+	}
+	
+	.msg3n{
+		background-image: url('img/iPadMessage3n.png');
+	}
+	
+	.msg1m{
+		background-image: url('img/iPadMessage1m.png');
+	}
+	
+	.msg2m{
+		background-image: url('img/iPadMessage2m.png');
+	}
 }
 
 
