@@ -14,17 +14,17 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>iPadSpring.png</string>
-				<string>iPadSpring@2x.png</string>
-				<string>icon-72.png</string>
-				<string>icon-72@2x.png</string>
+				<string>Icon-72.png</string>
+				<string>Icon-72@2x.png</string>
+				<string>Icon.png</string>
+				<string>Icon@2x.png</string>
+				<string>Default.png</string>
+				<string>Default@2x.png</string>
 				<string>Default-Portrait~ipad.png</string>
 				<string>Default-Portrait@2x~ipad.png</string>
-				<string>iPhoneSpring@2x.png</string>
-				<string>iPhoneSpring.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>

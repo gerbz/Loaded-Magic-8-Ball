@@ -18,55 +18,23 @@
 		background-repeat: no-repeat;	
 	}
 
-@-webkit-keyframes rotate {
-  from {-webkit-transform:rotate(0deg);}
-  to {  -webkit-transform:rotate(360deg);}
-}
-
-
-	.msgShake{
-		background-image: url('img/iPadMessageShake.png');
+	.message{
+		
 	}
 
-	.msgBlank{
+	@-webkit-keyframes rotate {
+	  from {-webkit-transform:rotate(0deg);}
+	  to {  -webkit-transform:rotate(360deg);}
+	}
+
+	.msgSpin{
+		margin-top:-420px;
 		-webkit-animation-duration:.3s;
 		-webkit-animation-iteration-count:infinite;
 		-webkit-animation-timing-function:linear;
 		-webkit-animation-name: rotate;
-		background-image: url('img/iPadMessageBlank.png');
 	}
 
-	.msg1y{
-		background-image: url('img/iPadMessage1y.png');
-	}	
-
-	.msg2y{
-		background-image: url('img/iPadMessage2y.png');
-	}	
-	
-	.msg3y{
-		background-image: url('img/iPadMessage3y.png');
-	}	
-
-	.msg1n{
-		background-image: url('img/iPadMessage1n.png');
-	}	
-	
-	.msg2n{
-		background-image: url('img/iPadMessage2n.png');
-	}
-	
-	.msg3n{
-		background-image: url('img/iPadMessage3n.png');
-	}
-	
-	.msg1m{
-		background-image: url('img/iPadMessage1m.png');
-	}
-	
-	.msg2m{
-		background-image: url('img/iPadMessage2m.png');
-	}
 }
 
 
