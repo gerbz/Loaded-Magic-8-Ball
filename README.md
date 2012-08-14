@@ -21,6 +21,7 @@ Report problems and submit feature requests on our [GitHub issue tracker](https:
 #### ToDo
 -iPhone support.  Images and css (currently only iPad)
 
+-Replace image messages with text messages 
 #### Known Bugs
 -Holding in landscape spins uncontrolably
 
