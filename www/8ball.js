@@ -119,31 +119,31 @@ function countShakes(shake){
     		// Easter egg trumps all options
     		if(easter == true){
     		    console.log('egg');
-    			msgImg.setAttribute("src", "img/iPadMessage1m.png");
+    			msgImg.setAttribute("src", "img/iPadMessage1e.png");
     			easter = false;
     		
     		}
     		// Display the maybe message if # is 0 or 4
     		else if(random == 4 || random == 0){
+    			console.log('maybe');
     			
     			// Pick the message based on the random number
     			switch(random){
     				case 0:
-    				  console.log('maybe');
+    				  console.log('ask siri');
     				  msgImg.setAttribute("src", "img/iPadMessage1m.png");
     				  break;
     				case 4:
-    				  console.log('maybe');
+    				  console.log('omg idk brb');
     				  msgImg.setAttribute("src", "img/iPadMessage2m.png");
     				  break;
     				default:
-    				  console.log('maybe');
-    				  msgImg.setAttribute("src", "img/iPadMessage3m.png");
+					  console.log('should never get here!');
     				  break;
     			}
-    			
+    		}
     		// If they shook more than the default, the answer is yes
-    		}else if(numberOfShakes > loadedDefault){
+    		else if(numberOfShakes > loadedDefault){
     			console.log('yes!');
     	
     			// Pick the message based on the random number
@@ -161,8 +161,7 @@ function countShakes(shake){
     				  msgImg.setAttribute("src", "img/iPadMessage3y.png");
     				  break;
     				default:
-    				  console.log('fosho!');
-    				  msgImg.setAttribute("src", "img/iPadMessage3y.png");
+    				  console.log('should never get here!');
     				  break;
     			}				
     			 
@@ -186,8 +185,7 @@ function countShakes(shake){
     				  msgImg.setAttribute("src", "img/iPadMessage3n.png");
     				  break;
     				default:
-    				  console.log('not a chance');
-    				  msgImg.setAttribute("src", "img/iPadMessage3n.png");
+    				  console.log('should never get here!');
     				  break;
     			}
     		}
