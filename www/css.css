@@ -1,4 +1,15 @@
 
+
+
+@media only screen and (device-width: 320px) {
+
+
+
+
+}
+
+
+
 @media only screen and (device-width: 768px) {
 
 
@@ -34,14 +45,5 @@
 		-webkit-animation-timing-function:linear;
 		-webkit-animation-name: rotate;
 	}
-
-}
-
-
-
-@media only screen and (min-device-width: 1536px) and (orientation : portriat) and (-webkit-min-device-pixel-ratio: 2) {
-
-
-
 
 }
