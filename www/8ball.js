@@ -6,6 +6,38 @@ var gameOn;
 var lastShake;
 var easter;
 
+// Yes Messages
+var msgY = [
+	'Most definitely',
+	'Positively',
+	'Fo real fo sho!'
+];
+
+// No Messages
+var msgN = [
+	'Aw hell no!',
+	'No chance',
+	'Don\'t count on it'
+];
+
+// Maybe Messages
+var msgM = [
+	'Ask Siri',
+	'OMG IDK! BRB =/'
+];
+
+// Easter Egg Messages
+var msgE = [
+	'#iOSDevCamp<br>FTW!'
+];
+
+// Blank Messages
+var msgB = [
+	'Shake Me'
+];
+
+
+
 // Random number generator
 //http://stackoverflow.com/a/1527820/345599
 function getRandomInt (min, max) {
@@ -13,17 +45,13 @@ function getRandomInt (min, max) {
 }
 
 // Start watching the acceleration
-//
 function startWatch() {
-
-    // Update acceleration every 3 seconds
+    // Update acceleration every 10 miliseconds
     var options = { frequency: 100 };
-
     watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 }
 
 // Stop watching the acceleration
-//
 function stopWatch() {
     if (watchID) {
         navigator.accelerometer.clearWatch(watchID);
@@ -31,8 +59,7 @@ function stopWatch() {
     }
 }
 
-// onSuccess: Get a snapshot of the current acceleration
-//
+// A read of every accelerameter response
 function onSuccess(acceleration) {
     
     //DEBUG display the accelerometer info
@@ -55,11 +82,10 @@ function onSuccess(acceleration) {
     	// Once we start counting, the shakes dont need to be so hard to count
     	gameOn = true;
 		
-    	// Spin the blank image
+    	// Spin the message
     	var msgDiv = document.getElementById("message");
     	msgDiv.setAttribute("class", "msgSpin");
-    	msgDiv.setAttribute("style", "margin-top:-120px;");
-    	document.getElementById("msgimg").setAttribute("src", "img/iPadMessageBlank.png");
+    	msgDiv.innerHTML = msgB[0];
     	
     	// A "shake" means it crossed the x2 threshold
     	var shake;
@@ -103,13 +129,11 @@ function countShakes(shake){
     	// If they do not shake for 1 second, they are done shaking
     	if(sameShakeCount > 10 && gameOn == true){
 			
-			// Stop spinning and recenter
+			// Get the message element
 			var msgDiv = document.getElementById("message");
-			msgDiv.setAttribute("style", "");
-			msgDiv.setAttribute("class", "");
 			
-			// Get the image element to swap it out later
-			var msgImg = document.getElementById("msgimg");
+			// Stop spinning
+			msgDiv.setAttribute("class", "message");
 
     		//Get a random number to determine which message to display
     		var random = getRandomInt(0, 4);
@@ -118,76 +142,74 @@ function countShakes(shake){
     		// Begin deciding which message to display
     		// Easter egg trumps all options
     		if(easter == true){
-    		    console.log('egg');
-    			msgImg.setAttribute("src", "img/iPadMessage1m.png");
+    		    console.log(msgE[0]);
+    			msgDiv.innerHTML = msgE[0];
     			easter = false;
     		
     		}
     		// Display the maybe message if # is 0 or 4
     		else if(random == 4 || random == 0){
+    			console.log('maybe');
     			
     			// Pick the message based on the random number
     			switch(random){
     				case 0:
-    				  console.log('maybe');
-    				  msgImg.setAttribute("src", "img/iPadMessage1m.png");
+    				  console.log(msgM[0]);
+    				  msgDiv.innerHTML = msgM[0];
     				  break;
     				case 4:
-    				  console.log('maybe');
-    				  msgImg.setAttribute("src", "img/iPadMessage2m.png");
+    				  console.log(msgM[1]);
+    				  msgDiv.innerHTML = msgM[1];
     				  break;
     				default:
-    				  console.log('maybe');
-    				  msgImg.setAttribute("src", "img/iPadMessage3m.png");
+					  console.log('should never get here!');
     				  break;
     			}
-    			
+    		}
     		// If they shook more than the default, the answer is yes
-    		}else if(numberOfShakes > loadedDefault){
+    		else if(numberOfShakes >= loadedDefault){
     			console.log('yes!');
     	
     			// Pick the message based on the random number
     			switch(random){
     				case 1:
-    				  console.log('yeah totally');
-    				  msgImg.setAttribute("src", "img/iPadMessage1y.png");
+    				  console.log(msgY[0]);
+    				  msgDiv.innerHTML = msgY[0];
     				  break;
     				case 2:
-    				  console.log('thats correct');
-    				  msgImg.setAttribute("src", "img/iPadMessage2y.png");
+    				  console.log(msgY[1]);
+    				  msgDiv.innerHTML = msgY[1];
     				  break;
     				case 3:
-    				  console.log('fosho!');
-    				  msgImg.setAttribute("src", "img/iPadMessage3y.png");
+    				  console.log(msgY[2]);
+    				  msgDiv.innerHTML = msgY[2];
     				  break;
     				default:
-    				  console.log('fosho!');
-    				  msgImg.setAttribute("src", "img/iPadMessage3y.png");
+    				  console.log('should never get here!');
     				  break;
     			}				
     			 
     		// If they shook less than the default, the answer is no
-    		// Dont set it to anything when the app first loads (>3)        		
+    		// If its less than three default back to shake me      		
     		}else if(numberOfShakes > 3 && numberOfShakes < loadedDefault){
     			console.log('no...');
     		
     			// Pick the message based on the random number
     			switch(random){
     				case 1:
-    				  console.log('no way');
-    				  msgImg.setAttribute("src", "img/iPadMessage1n.png");
+    				  console.log(msgN[0]);
+    				  msgDiv.innerHTML = msgN[0];
     				  break;
     				case 2:
-    				  console.log('I think not');
-    				  msgImg.setAttribute("src", "img/iPadMessage2n.png");
+    				  console.log(msgN[1]);
+    				  msgDiv.innerHTML = msgN[1];
     				  break;
     				case 3:
-    				  console.log('not a chance');
-    				  msgImg.setAttribute("src", "img/iPadMessage3n.png");
+    				  console.log(msgN[2]);
+    				  msgDiv.innerHTML = msgN[2];
     				  break;
     				default:
-    				  console.log('not a chance');
-    				  msgImg.setAttribute("src", "img/iPadMessage3n.png");
+    				  console.log('should never get here!');
     				  break;
     			}
     		}
@@ -197,7 +219,7 @@ function countShakes(shake){
     		numberOfShakes = 0;
     		
     	}
-    	//console.log(sameShakeCount);
+    	
     }
     
     // Remember the last shake for next time

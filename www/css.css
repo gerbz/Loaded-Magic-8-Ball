@@ -1,25 +1,39 @@
 
+
+
+@media only screen and (device-width: 320px) {
+
+
+
+
+}
+
+
+
 @media only screen and (device-width: 768px) {
 
 
 	body{
-		background-image: url('img/iPadBg.png');
+		background-color:#000;
 	
 	}
+
+	a:link {text-decoration:none;}
+	a:visited {text-decoration:none;}
+	a:hover {text-decoration:none;}
+	a:active {text-decoration:none;}
 	
 	#message{
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		margin-top: -86px;
-		margin-left: -136px;
-		height:250px;
-		width:280px;
-		background-repeat: no-repeat;	
-	}
-
-	.message{
-		
+		vertical-align: middle;
+		text-align: center;
+		margin: -50px 0  0 -150px;
+		height:100px;
+		width:300px;
+		font-size: 40px;
+		color:#fff;
 	}
 
 	@-webkit-keyframes rotate {
@@ -28,20 +42,10 @@
 	}
 
 	.msgSpin{
-		margin-top:-420px;
 		-webkit-animation-duration:.3s;
 		-webkit-animation-iteration-count:infinite;
 		-webkit-animation-timing-function:linear;
 		-webkit-animation-name: rotate;
 	}
-
-}
-
-
-
-@media only screen and (min-device-width: 1536px) and (orientation : portriat) and (-webkit-min-device-pixel-ratio: 2) {
-
-
-
 
 }
