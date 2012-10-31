@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0291DA5A1641EE76000FDC43 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 029834E315C05C20007941A4 /* Default.png */; };
 		0291DA5B1641EE7A000FDC43 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029834E115C05C04007941A4 /* Default@2x.png */; };
+		0291DA611641EF43000FDC43 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291DA601641EF43000FDC43 /* Default-568h@2x.png */; };
 		029834D415C05A5B007941A4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 029834D315C05A5B007941A4 /* Icon.png */; };
 		029834D615C05A60007941A4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029834D515C05A60007941A4 /* Icon@2x.png */; };
 		029834DE15C05B7C007941A4 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 029834DD15C05B7C007941A4 /* Icon-72.png */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0291DA601641EF43000FDC43 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		029834D315C05A5B007941A4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		029834D515C05A60007941A4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		029834DD15C05B7C007941A4 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		02F94BF715BB654D008C4A05 = {
 			isa = PBXGroup;
 			children = (
+				0291DA601641EF43000FDC43 /* Default-568h@2x.png */,
 				029834E715C05C36007941A4 /* Default-Portrait@2x~ipad.png */,
 				029834E515C05C2F007941A4 /* Default-Portrait~ipad.png */,
 				029834E315C05C20007941A4 /* Default.png */,
@@ -364,6 +367,7 @@
 				029834E815C05C36007941A4 /* Default-Portrait@2x~ipad.png in Resources */,
 				0291DA5A1641EE76000FDC43 /* Default.png in Resources */,
 				0291DA5B1641EE7A000FDC43 /* Default@2x.png in Resources */,
+				0291DA611641EF43000FDC43 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
