@@ -1,28 +1,36 @@
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* Disable selection/Copy of UIWebView */
+}
 
-
-
-@media only screen and (device-width: 320px) {
-
-
-
+body{
+    background-color:#000;
 
 }
 
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
 
+#accelerometer, #shakes{
+	color:white;
+}
 
-@media only screen and (device-width: 768px) {
+@-webkit-keyframes rotate {
+  from {-webkit-transform:rotate(0deg);}
+  to {  -webkit-transform:rotate(360deg);}
+}
 
+.msgSpin{
+    -webkit-animation-duration:.3s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-name: rotate;
+}
 
-	body{
-		background-color:#000;
-	
-	}
+@media only screen and (device-width: 320px) {
 
-	a:link {text-decoration:none;}
-	a:visited {text-decoration:none;}
-	a:hover {text-decoration:none;}
-	a:active {text-decoration:none;}
-	
 	#message{
 		position: fixed;
 		top: 50%;
@@ -36,16 +44,21 @@
 		color:#fff;
 	}
 
-	@-webkit-keyframes rotate {
-	  from {-webkit-transform:rotate(0deg);}
-	  to {  -webkit-transform:rotate(360deg);}
-	}
+}
 
-	.msgSpin{
-		-webkit-animation-duration:.3s;
-		-webkit-animation-iteration-count:infinite;
-		-webkit-animation-timing-function:linear;
-		-webkit-animation-name: rotate;
+@media only screen and (device-width: 768px) {
+	
+	#message{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		vertical-align: middle;
+		text-align: center;
+		margin: -50px 0  0 -150px;
+		height:100px;
+		width:300px;
+		font-size: 40px;
+		color:#fff;
 	}
 
 }

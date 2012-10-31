@@ -510,7 +510,8 @@
 				);
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "magic8ball/magic8ball-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -522,6 +523,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 arm7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -541,7 +543,8 @@
 				);
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "magic8ball/magic8ball-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -554,6 +557,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 arm7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
