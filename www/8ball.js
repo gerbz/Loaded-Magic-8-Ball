@@ -85,11 +85,6 @@ function onSuccess(acceleration) {
 
     	// Once we start counting, the shakes dont need to be so hard to count
     	gameOn = true;
-		
-    	// Spin the message
-    	var msgDiv = document.getElementById("message");
-    	msgDiv.setAttribute("class", "msgSpin");
-    	msgDiv.innerHTML = msgB[0];
     	
     	// A "shake" means it crossed the x2 threshold
     	var shake;
@@ -117,6 +112,12 @@ function egg(){
 	console.log('egg hit!');
 }
 
+function startSpinning(){
+    	var msgDiv = document.getElementById("message");
+    	msgDiv.setAttribute("class", "msgSpin");
+    	msgDiv.innerHTML = msgB[0];
+}
+
 function countShakes(shake,x){
     
     // Count up the shakes if its different from the last shake
@@ -124,6 +125,12 @@ function countShakes(shake,x){
     if(shake != lastShake){
     	numberOfShakes++;
     	sameShakeCount = 0;
+    	
+    	// Start spinning after a few shakes, Makes it a little less sensitive
+    	if(numberOfShakes == 3){
+    		startSpinning();
+    	}
+    	
     }else{
     	
     	// Count how many times a shake did _not_ happen
