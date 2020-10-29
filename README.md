@@ -26,4 +26,4 @@ Report problems and submit feature requests on our [GitHub issue tracker](https:
 
 ---
 
-Ideaized by [@nicklum](http://twitter.com/nicklum) developed by [@greg_gerber](http://twitter.com/greg_gerber) at [#iOSDevCamp2012](http://iosdevcamp.org)
+Ideaized by [@nicklum](http://twitter.com/nicklum) developed by [@gerbz](http://twitter.com/gerbz) at [#iOSDevCamp2012](http://iosdevcamp.org)
